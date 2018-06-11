@@ -14,7 +14,7 @@ Not on the Google Play Store, this app is just for learning purpose.
 * No permission needed by the app
 
 ## License 
-* see [LICENSE](https://github.com/sldevand/departements/LICENSE.md) file
+* see [LICENSE](https://github.com/sldevand/Departements/blob/master/LICENSE.md) file
 
 ## Version 
 * Version 0.1
