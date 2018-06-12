@@ -7,14 +7,13 @@ import fr.m2iformation.departements.db.DbInit;
 
 public abstract class AbstractDataModel {
 
-    protected DbInit dbInit;
+
     protected SQLiteDatabase db;
     protected Context ctx;
 
     public AbstractDataModel(Context ctx) {
 
-        this.dbInit = DbInit.getInstance(ctx);
-        db = dbInit.getWritableDatabase();
+        db = DbInit.getInstance(ctx).getWritableDatabase();
         this.ctx=ctx;
     }
 }
