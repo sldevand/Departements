@@ -1,20 +1,36 @@
-Departements
-======
+# Departements
+
 **Departements** is an app to look for French Departments.
 You can add, edit and delete a department.
 
-#### Screenshots
-![Screenshot Android](https://github.com/sldevand/Departements/blob/master/screenshots/Departements%20Found.png)
-![Screenshot Android](https://github.com/sldevand/Departements/blob/master/screenshots/Departements%20Home.png)
+## Live Example
+![logo](https://raw.githubusercontent.com/sldevand/Departements/master/screenshots/Departements%20Found.png)
 
-#### App Stores
-Not on the Google Play Store, this app is just for learning purpose.
+## Serve
+You can clone this repository and create an Android project for build on your device.
+```
+git clone https://github.com/sldevand/Departements.git
+```
+## Tests
 
-## Permissions
-* No permission needed by the app
+Run the test with JUnit
+```
+test src/
+```
+## Built With
 
-## License 
-* see [LICENSE](https://github.com/sldevand/Departements/blob/master/LICENSE.md) file
+* [Android Studio](https://developer.android.com/studio/) - The Android framework used
 
-## Version 
-* Version 0.1
+## Contributing
+- Alain Pré
+
+## Authors
+
+* **Sébastien Lorrain** - *Initial work* - [Departements](https://github.com/sldevand/Departements)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Motivation
+I want to master Java and build on Android device.
