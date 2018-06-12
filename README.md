@@ -1,3 +1,6 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9e454abb3a4d489888c95730b5a232f6)](https://www.codacy.com/app/sldevand/Departements?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sldevand/Departements&amp;utm_campaign=Badge_Grade)
+
+
 # Departements
 
 **Departements** is an app to look for French Departments.
