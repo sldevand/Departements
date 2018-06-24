@@ -7,7 +7,7 @@
 You can add, edit and delete a department.
 
 ## Live Example
-![logo](https://raw.githubusercontent.com/sldevand/Departements/master/screenshots/Departements%20Found.png)
+![live example](https://raw.githubusercontent.com/sldevand/Departements/master/resources/presentation.gif)
 
 ## Serve
 You can clone this repository and create an Android project for build on your device.

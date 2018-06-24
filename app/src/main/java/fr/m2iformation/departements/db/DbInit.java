@@ -14,12 +14,12 @@ public class DbInit extends SQLiteOpenHelper {
     public static String DB_DEPT_TABLE_NAME="departements";
     public static String[] DB_DEPT_FIELDS = new String[]{"no_dept","no_region","nom","nom_std","surface","date_creation","chef_lieu","url_wiki"};
 
-    private static Context ctxt;
+
     private static DbInit instance;
 
     private DbInit(Context ctxt) {
         super(ctxt, DB_NAME, null, 1);
-        this.ctxt = ctxt;
+
     }
 
     public static DbInit getInstance(Context ctxt){
