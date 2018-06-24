@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -26,11 +25,6 @@ public class Departement extends AbstractDataModel {
 
     public Departement(Context ctx) {
         super(ctx);
-    }
-
-    public Departement(Context ctx, String no) throws DbException {
-        this(ctx);
-        select(no);
     }
 
     public void select(String no) throws SQLException, DbException {
@@ -72,10 +66,6 @@ public class Departement extends AbstractDataModel {
         db.insert(DbInit.DB_DEPT_TABLE_NAME, null, cv);
     }
 
-    public void close() {
-        db.close();
-    }
-
     public void clear() {
         noDept = "";
         noRegion = 0;
@@ -91,8 +81,8 @@ public class Departement extends AbstractDataModel {
         urlWiki = "";
     }
 
-    public void isValid() throws DbException {
-        noDept.trim();
+    private void isValid() throws DbException {
+        noDept=noDept.trim();
         String regex = "([0-9]{2}|2A|2B|97[0-5])";
         boolean match = Pattern.matches(regex, noDept);
 
@@ -167,10 +157,6 @@ public class Departement extends AbstractDataModel {
 
     public Region getRegion() {
         return region;
-    }
-
-    public void setRegion(Region region) {
-        this.region = region;
     }
 
     @Override

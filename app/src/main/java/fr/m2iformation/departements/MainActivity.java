@@ -2,18 +2,20 @@ package fr.m2iformation.departements;
 
 import android.content.ContentValues;
 import android.database.SQLException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 
-import fr.m2iformation.departements.db.DbInit;
+import java.util.Objects;
+
 import fr.m2iformation.departements.db.DbException;
+import fr.m2iformation.departements.db.DbInit;
 import fr.m2iformation.departements.model.Departement;
 
-import static fr.m2iformation.departements.tools.Tools.*;
+import static fr.m2iformation.departements.tools.Tools.isNumeric;
+import static fr.m2iformation.departements.tools.Tools.showToast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText txtSearch;
@@ -28,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtUrlWiki;
 
     private Departement dept;
-
-    private ImageView ivSave,ivDelete,ivAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
         txtChefLieu = findViewById(R.id.txtChefLieu);
         txtUrlWiki = findViewById(R.id.txtUrlWiki);
 
-        ivSave = findViewById(R.id.ivSave);
-        ivDelete = findViewById(R.id.ivDelete);
-        ivAdd = findViewById(R.id.ivAdd);
+
 
         dept = new Departement(this);
 
@@ -193,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
         if (imm != null && imm.isAcceptingText()) {
-            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+            imm.hideSoftInputFromWindow(Objects.requireNonNull(getCurrentFocus()).getWindowToken(), 0);
         }
     }
 
@@ -211,18 +209,8 @@ public class MainActivity extends AppCompatActivity {
         txtUrlWiki.setText("");
 
         dept.clear();
-       /* ivSave.setEnabled(false);
-        ivDelete.setEnabled(false);
-        ivAdd.setEnabled(true);
-    */
         hideKeyboard();
     }
-
-    public void dispEmpty(){
-        showToast(this,"Un champ est vide!");
-
-    }
-
 
 
 }

@@ -5,13 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 
 import fr.m2iformation.departements.db.DbInit;
 
-public abstract class AbstractDataModel {
+abstract class AbstractDataModel {
 
 
-    protected SQLiteDatabase db;
-    protected Context ctx;
+    SQLiteDatabase db;
+    Context ctx;
 
-    public AbstractDataModel(Context ctx) {
+    AbstractDataModel(Context ctx) {
 
         db = DbInit.getInstance(ctx).getWritableDatabase();
         this.ctx=ctx;
